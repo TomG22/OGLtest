@@ -8,9 +8,9 @@ namespace test {
 			TestClearColor();
 			~TestClearColor();
 
-			virtual void OnUpdate(float deltaTime) override;
-			virtual void OnRender() override;
-			virtual void OnImGuiRender() override;
+			void OnUpdate(float deltaTime) override;
+			void OnRender() override;
+			void OnImGuiRender() override;
 		private:
 			float m_ClearColor[4];
 	};
