@@ -35,6 +35,7 @@ int main() {
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     window = glfwCreateWindow(1920, 1080, "Hello World", NULL, NULL);
+    glfwMaximizeWindow(window);
     if (!window) {
         glfwTerminate();
         return -1;
@@ -44,7 +45,6 @@ int main() {
     if (glewInit() != GLEW_OK) {
         std::cout << "glewInit: GLEW_OK false" << std::endl;
     }
-    glfwMaximizeWindow(window);
     std::cout << glGetString(GL_VERSION) << std::endl;
     
     {   
